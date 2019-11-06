@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+body{
+  background-image:url("BoldBuffBackground.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+</style>
+
+
+<script>
+function changeBody(whichImage){
+  //not working
+  document.body.background=whichImage;
+}
+</script>
+
+<body>
+
+  <div id="login_div" class="main-div">
+
+    <h2>Buff Fit Web Application</h2>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login</button>
+
+
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome Page</h3>
+    <p id="user_para"> Welcome to the Buff Fit Web Application. You are currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+    <a href="homeCalendar.html">link_to_homepage</a>
+
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCaSQIa1zvUiDp6qV-yKKgGVEmWkSDrZR0",
+      authDomain: "grades-f24de.firebaseapp.com",
+      databaseURL: "https://grades-f24de.firebaseio.com",
+      projectId: "grades-f24de",
+      storageBucket: "grades-f24de.appspot.com",
+      messagingSenderId: "734512442720"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
