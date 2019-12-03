@@ -45,3 +45,110 @@ function login(){
 function logout(){
   firebase.auth().signOut();
 }
+
+function openModal() {
+  console.log("hi");  
+  /* Note that you do NOT have to do a document.getElementById anywhere in this exercise. Use the elements below */
+  var newUsername = document.getElementById("nUsername");
+  var newEmail = document.getElementById("nEmail");
+  var newPassword = document.getElementById("psw");
+  var confirmNewPassword = document.getElementById("cpsw");
+  var letter = document.getElementById("letter");
+  var capital = document.getElementById("capital");
+  var number = document.getElementById("number");
+  var length = document.getElementById("length");    
+  var match = document.getElementById("match");
+
+  document.getElementById("message").style.display = "none";
+  document.getElementById("letter").style.display = "none";
+  document.getElementById("capital").style.display = "none";
+  document.getElementById("number").style.display = "none";
+  document.getElementById("length").style.display = "none";
+  document.getElementById("match").style.display = "none";
+// When the user starts to type something inside the password field
+  newPassword.onkeyup = function() {
+      var lowerCaseLetters = /[a-z]/g;
+      var upperCaseLetters = /[A-Z]/g;
+      var numbers = /\d/g;
+      var minLength = 8; 
+      if(newPassword.value.match(lowerCaseLetters)) {
+        document.getElementById("letter").style.display = "none";     
+          letter.classList.remove("invalid"); 
+          letter.classList.add("valid"); 
+      } else {
+        document.getElementById("message").style.display = "block";
+        document.getElementById("letter").style.display = "block";
+          letter.classList.remove("valid"); 
+          letter.classList.add("invalid"); 
+      }
+
+      // Validate capital letters        
+      if(newPassword.value.match(upperCaseLetters)) { 
+        document.getElementById("capital").style.display = "none";
+          capital.classList.remove("invalid"); 
+          capital.classList.add("valid");
+      } else {
+        document.getElementById("message").style.display = "block";
+        document.getElementById("capital").style.display = "block";
+          capital.classList.remove("valid");
+          capital.classList.add("invalid");
+      }
+
+      // Validate numbers        
+      if(newPassword.value.match(numbers)) { 
+        document.getElementById("number").style.display = "none";
+          number.classList.remove("invalid"); 
+          number.classList.add("valid"); 
+      } else {
+        document.getElementById("message").style.display = "block";
+        document.getElementById("number").style.display = "block";
+          number.classList.remove("valid"); 
+          number.classList.add("invalid");
+      }
+
+      // Validate length
+      if(newPassword.value.length >= minLength) {
+        document.getElementById("length").style.display = "none";
+          length.classList.remove("invalid");
+          length.classList.add("valid");
+      } else {
+        document.getElementById("message").style.display = "block";
+        document.getElementById("length").style.display = "block";
+          length.classList.remove("valid");
+          length.classList.add("invalid");
+      }
+  }
+  confirmNewPassword.onkeyup = function() {
+              // Validate password and confirmPassword
+              var passEqualsConfPass = (newPassword.value == confirmNewPassword.value);
+              if(passEqualsConfPass) { 
+                document.getElementById("message").style.display = "none";
+                document.getElementById("match").style.display = "none";
+                  match.classList.remove("invalid"); 
+                  match.classList.add("valid"); 
+              } else {
+                document.getElementById("message").style.display = "block";
+                document.getElementById("match").style.display = "block";
+                  match.classList.remove("valid"); 
+                  match.classList.add("invalid"); 
+              }        
+              enableButton(letter, capital, number, length, match);
+  }
+}
+
+
+function enableButton(letter, capital, number, length, match) {
+  var button = document.getElementById('submit_sign_up_button');
+  var condition = (letter.classList.contains('valid') &&
+                   capital.classList.contains('valid') &&
+                   number.classList.contains('valid') &&
+                   length.classList.contains('valid') &&
+                   match.classList.contains('valid') );
+  if(condition) {       
+          button.disabled = false;
+      }
+  else{
+      button.disabled = true;
+  }        
+  }    
+
