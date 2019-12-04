@@ -46,9 +46,9 @@ function logout(){
   firebase.auth().signOut();
 }
 
+var phase2 = false;
+
 function openModal() {
-  console.log("hi");  
-  /* Note that you do NOT have to do a document.getElementById anywhere in this exercise. Use the elements below */
   var newUsername = document.getElementById("nUsername");
   var newEmail = document.getElementById("nEmail");
   var newPassword = document.getElementById("psw");
@@ -117,9 +117,25 @@ function openModal() {
           length.classList.remove("valid");
           length.classList.add("invalid");
       }
+      if(phase2 == true){
+        var passEqualsConfPass = (newPassword.value == confirmNewPassword.value);
+              if(passEqualsConfPass) { 
+                document.getElementById("message").style.display = "none";
+                document.getElementById("match").style.display = "none";
+                  match.classList.remove("invalid"); 
+                  match.classList.add("valid"); 
+              } else {
+                document.getElementById("message").style.display = "block";
+                document.getElementById("match").style.display = "block";
+                  match.classList.remove("valid"); 
+                  match.classList.add("invalid"); 
+              }        
+              enableButton(letter, capital, number, length, match);
+      }
   }
   confirmNewPassword.onkeyup = function() {
               // Validate password and confirmPassword
+              phase2 = true;
               var passEqualsConfPass = (newPassword.value == confirmNewPassword.value);
               if(passEqualsConfPass) { 
                 document.getElementById("message").style.display = "none";
