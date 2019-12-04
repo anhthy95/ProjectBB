@@ -49,16 +49,17 @@ function logout(){
 var phase2 = false;
 
 function openModal() {
-  var newUsername = document.getElementById("nUsername");
   var newEmail = document.getElementById("nEmail");
   var newPassword = document.getElementById("psw");
   var confirmNewPassword = document.getElementById("cpsw");
+  var invalid = document.getElementById("invalid-email");
   var letter = document.getElementById("letter");
   var capital = document.getElementById("capital");
   var number = document.getElementById("number");
   var length = document.getElementById("length");    
   var match = document.getElementById("match");
 
+  document.getElementById("invalid-email").style.display = "none";
   document.getElementById("message").style.display = "none";
   document.getElementById("letter").style.display = "none";
   document.getElementById("capital").style.display = "none";
@@ -66,6 +67,21 @@ function openModal() {
   document.getElementById("length").style.display = "none";
   document.getElementById("match").style.display = "none";
 // When the user starts to type something inside the password field
+  newEmail.onfocusout = function(){
+    var atSymbol = /[@]/g;
+    var com = /\b.com\b/g;
+    if(newEmail.value.match(atSymbol) && newEmail.value.match(com)){
+      document.getElementById("invalid-email").style.display = "none";
+      invalid.classlist.remove("invalid");
+      invalid.classlist.add("valid");
+    }
+    else{
+      document.getElementById("invalid-email").style.display = "block";
+      invalid.classlist.remove("valid");
+      invalid.classlist.add("invalid");
+    }
+  }
+
   newPassword.onkeyup = function() {
       var lowerCaseLetters = /[a-z]/g;
       var upperCaseLetters = /[A-Z]/g;
@@ -130,7 +146,7 @@ function openModal() {
                   match.classList.remove("valid"); 
                   match.classList.add("invalid"); 
               }        
-              enableButton(letter, capital, number, length, match);
+              enableButton(letter, capital, number, length, match, invalid);
       }
   }
   confirmNewPassword.onkeyup = function() {
@@ -148,18 +164,19 @@ function openModal() {
                   match.classList.remove("valid"); 
                   match.classList.add("invalid"); 
               }        
-              enableButton(letter, capital, number, length, match);
+              enableButton(letter, capital, number, length, match, invalid);
   }
 }
 
 
-function enableButton(letter, capital, number, length, match) {
+function enableButton(letter, capital, number, length, match, invalid) {
   var button = document.getElementById('submit_sign_up_button');
   var condition = (letter.classList.contains('valid') &&
                    capital.classList.contains('valid') &&
                    number.classList.contains('valid') &&
                    length.classList.contains('valid') &&
-                   match.classList.contains('valid') );
+                   match.classList.contains('valid') &&
+                   invalid.classList.contains('valid'));
   if(condition) {       
           button.disabled = false;
       }
