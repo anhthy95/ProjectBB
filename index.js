@@ -1,3 +1,4 @@
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -58,6 +59,7 @@ function openModal() {
   var number = document.getElementById("number");
   var length = document.getElementById("length");    
   var match = document.getElementById("match");
+  var newUsername = document.getElementById("nUsername");
 
   document.getElementById("invalid-email").style.display = "none";
   document.getElementById("message").style.display = "none";
@@ -66,19 +68,32 @@ function openModal() {
   document.getElementById("number").style.display = "none";
   document.getElementById("length").style.display = "none";
   document.getElementById("match").style.display = "none";
+  document.getElementById("empty").style.dispaly = "none";
 // When the user starts to type something inside the password field
+  newUsername.onfocusout = function(){
+    if(newUsername.value != ""){
+      document.getElementById("empty").style.display = "none";
+      empty.classList.remove("invalid");
+      empty.classList.add("valid");
+    }
+    else{
+      document.getElementById("empty").style.display = "block";
+      empty.classList.remove("valid");
+      empty.classList.add("invalid");
+    }
+  }
   newEmail.onfocusout = function(){
     var atSymbol = /[@]/g;
     var com = /\b.com\b/g;
     if(newEmail.value.match(atSymbol) && newEmail.value.match(com)){
       document.getElementById("invalid-email").style.display = "none";
-      invalid.classlist.remove("invalid");
-      invalid.classlist.add("valid");
+      invalid.classList.remove("invalid");
+      invalid.classList.add("valid");
     }
     else{
       document.getElementById("invalid-email").style.display = "block";
-      invalid.classlist.remove("valid");
-      invalid.classlist.add("invalid");
+      invalid.classList.remove("valid");
+      invalid.classList.add("invalid");
     }
   }
 
@@ -185,3 +200,26 @@ function enableButton(letter, capital, number, length, match, invalid) {
   }        
   }    
 
+function submitInfo(){
+  //sign up
+const signupForm = document.querySelector('#signup-form');
+signupForm.addEventListener('submit',(e) => {
+    e.preventDefault();
+
+//get user info
+
+const email = signupForm['nEmail'].value;
+const password = signupForm['psw'].value;
+
+//sign up the user in the database
+
+auth.createUserWithEmailAndPassword(email, password).then(cred =>{
+
+    
+    signupForm.reset(); 
+    
+
+});
+
+})
+}
