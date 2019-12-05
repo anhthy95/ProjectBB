@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+	<link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="./index.js"></script>
+</head>
+<style>
+body{
+  background-image:url("BoldBuffBackground.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+</style>
+
+
+<script>
+function changeBody(whichImage){
+  //not working
+  document.body.background=whichImage;
+}
+</script>
+
+<body>
+
+  <div id="login_div" class="main-div">
+
+    <h2>Buff Fit Web Application</h2>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login</button>
+    <br>
+    <div class="text-center">
+    <a href="#modal_sign_up" class="btn btn-info" data-toggle="modal" onclick="openModal()">Sign Up</a>
+  </div>
+  </div>
+  <!-- button to click to show the modal -->
+  <!--!! need to fix css formatting for modal !!-->
+  <div id="signup_div" class="modal-div">
+  
+
+  <!-- modal html -->
+  <div id="modal_sign_up" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="avatar">
+
+          </div>
+          <h4 class="modal-title">Enter Information</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <!-- new username -->
+            <input id="nUsername" type="text" class="form-control" name="username" placeholder="Username" required="required">
+          </div>
+          <div class="form-group">
+            <!-- new email -->
+            <input id="nEmail" type="text" class="form-control" name="email" placeholder="Email" required="required">
+          </div>
+          <div id="invalid-email" style="display:block" class="invalid">
+            <p>Email is invalid</p>
+          </div>
+          <div class="form-group">
+            <!-- new password -->
+            <input id="psw" type="password" class="form-control" name="password" placeholder="Password" required="required">
+          </div>
+          <div id="message" style="display:block">
+              <p>Password must contain the following:</p>        
+              <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+              <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+              <p id="number" class="invalid">A <b>number</b></p>
+              <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+              <p id="match" class="invalid">Password and Confirm Password Match</p>
+            </div>
+          <div class="form-group">
+            <input id="cpsw" type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+          </div>
+          <div class="form-group">
+            <!--!! Save new information to a new user account !!-->
+            <button id="submit_sign_up_button" class="btn btn-primary btn-block login-btn" disabled
+              onClick="onClickFunction()">Sign Up</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome Page</h3>
+    <p id="user_para"> Welcome to the Buff Fit Web Application. You are currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+    <a href="homeCalendar.html">link_to_homepage</a>
+
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCaSQIa1zvUiDp6qV-yKKgGVEmWkSDrZR0",
+      authDomain: "grades-f24de.firebaseapp.com",
+      databaseURL: "https://grades-f24de.firebaseio.com",
+      projectId: "grades-f24de",
+      storageBucket: "grades-f24de.appspot.com",
+      messagingSenderId: "734512442720"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
