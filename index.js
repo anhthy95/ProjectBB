@@ -50,6 +50,7 @@ function logout(){
 var phase2 = false;
 
 function openModal() {
+  console.log("hello");
   var newEmail = document.getElementById("nEmail");
   var newPassword = document.getElementById("psw");
   var confirmNewPassword = document.getElementById("cpsw");
