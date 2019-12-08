@@ -14,3 +14,10 @@ CODING RULE:
 2.	No litter on your code (No useless part)
 3.	Be Considerate and Leave an Instruction note for Your Peers. 
 
+
+RESOURCES:
+
+- Link to Firebase Database:
+
+
+
