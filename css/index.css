@@ -1,9 +1,15 @@
 body {
-  background: #fff;
+  background-color: #000000;
   padding: 0px;
   margin: 0px;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
+  background-image:url("../img/BoldBuffBackground.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+
+
 }
 
 input, button {

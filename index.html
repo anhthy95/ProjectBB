@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html>
+
+<!-------------HEAD ------------->
 <head>
   <title>Login</title>
   <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--Responsive-->
+
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
-	<link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<script type="text/javascript" src="./index.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="scripts/index.js"></script>
+
 </head>
-<style>
-body{
-  background-image:url("BoldBuffBackground.jpeg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-</style>
+<!-------------/HEAD ------------->
 
-
-<script>
-function changeBody(whichImage){
-  //not working
-  document.body.background=whichImage;
-}
-</script>
-
+<!-------------BODY ------------->
 <body>
+
+  <!------LOG IN ------->
 
   <div id="login_div" class="main-div">
 
     <h2>Buff Fit Web Application</h2>
+
+
     <input type="email" placeholder="Email..." id="email_field" />
     <input type="password" placeholder="Password..." id="password_field" />
 
-    <a href="WorkoutPage.html">
+    <a href="pages/WorkoutPage.html">
       <button onclick="login()">Login</button>
     </a>
+
+    <!------LOG IN ------->
+
+    
   
     <br>
     <div class="text-center">
-    <a href="#modal_sign_up" class="btn btn-info" data-toggle="modal" onclick="openModal()">Sign Up</a>
+    <a href="#modal_sign_up" class="btn btn-info" data-toggle="modal" onclick="openModal()">Sign Up</a>    <!-- button to click to show the modal -->
+    </div>
   </div>
-  </div>
-  <!-- button to click to show the modal -->
+ 
   <!--!! need to fix css formatting for modal !!-->
   
 
-  <!-- modal html -->
+  <!------SIGN UP ------->
   <div id="modal_sign_up" class="modal fade">
     <div class="modal-dialog modal-login">
       <div class="modal-content">
@@ -116,7 +115,7 @@ function changeBody(whichImage){
   
   </div>
 
-
+<!--------FIREBASE SETUP----------->
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 <!--removed auth.js dependency-->
@@ -135,9 +134,17 @@ function changeBody(whichImage){
     const auth = firebase.auth();
     const db = firebase.firestore();
   </script>
-  <script src="index.js"></script>
+<!--------/FIREBASE SETUP----------->
+
+<!------JAVASCRIPT------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="scripts/auth.js"></script>
+
   
 
 
 </body>
+<!-------------BODY ------------->
+
 </html>
