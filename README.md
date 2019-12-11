@@ -18,7 +18,13 @@ CODING RULE:
 
 RESOURCES:
 - URL format: ../img/url or ../css/url for html in pages. Basically ../ means go to parents folder
-- Link to Firebase Database:
+- Link to Firebase Database: 
+https://www.youtube.com/watch?v=F6UWb9FNnj4
+https://www.youtube.com/watch?v=PP4Tr0l08NE
+https://www.youtube.com/watch?v=-UOkri_WNWQ
+
+Helpful Playlist of Authentication on Firebase
+https://www.youtube.com/watch?v=aN1LnNq4z54&list=PL4cUxeGkcC9jUPIes_B8vRjn1_GaplOPQ
 
 
 
