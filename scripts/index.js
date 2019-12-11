@@ -1,5 +1,5 @@
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function(user) {   
   if (user) {
     // User is signed in.
 
@@ -201,6 +201,8 @@ function enableButton(letter, capital, number, length, match, invalid) {
   }        
   }    
 
+//-----------SIGN UP --------------------//
+
 function submitInfo(){
   //sign up
 const signupForm = document.querySelector('#signup-form');
@@ -213,14 +215,14 @@ const email = signupForm['nEmail'].value;
 const password = signupForm['psw'].value;
 
 //sign up the user in the database
+// close the signup modal & reset form
+
 
 auth.createUserWithEmailAndPassword(email, password).then(cred =>{
-
-    
-    signupForm.reset(); 
-    
-
-});
-
+  console.log(cred.user);
+  const modal = document.querySelector('#modal-signup');
+  M.Modal.getInstance(modal).close();
+  signupForm.reset(); 
+    });
 })
 }

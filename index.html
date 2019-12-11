@@ -16,8 +16,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/index.css">
-	<script type="text/javascript" src="scripts/index.js"></script>
-
+	
 </head>
 <!-------------/HEAD ------------->
 
@@ -53,33 +52,43 @@
 
   <!------SIGN UP ------->
   <div id="modal_sign_up" class="modal fade">
-    <div class="modal-dialog modal-login">
-      <div class="modal-content">
-        <form id ="signup-form">
+    <div class="modal-dialog">   
+    <div class="modal-content">
+      <form id ="signup-form">
+
+        <!--MODEL HEADER-->
         <div class="modal-header">
           <div class="avatar">
 
           </div>
           <h4 class="modal-title">Enter Information</h4>
+
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
+        <!--/MODEL HEADER-->
+
+        <!--MODEL BODY-->
         <div class="modal-body">
+          <!--UserName-->
           <div class="form-group">
-            <!-- new username -->
             <input id="nUsername" type="text" class="form-control" name="username" placeholder="Username" required="required">
           </div>
           <div id="empty" style="display:none" class="invalid">
             <p>Please enter a username</p>
           </div>
+         <!--/UserName-->
+
+          <!--Email-->
           <div class="form-group">
-            <!-- new email -->
-            <input id="nEmail" type="text" class="form-control" name="email" placeholder="Email" required="required">
+          <input id="nEmail" type="text" class="form-control" name="email" placeholder="Email" required="required">
           </div>
           <div id="invalid-email" style="display:none" class="invalid">
             <p>Email is invalid</p>
           </div>
+          <!--/Email-->
+
+          <!--Password -->
           <div class="form-group">
-            <!-- new password -->
             <input id="psw" type="password" class="form-control" name="password" placeholder="Password" required="required">
           </div>
           <div id="message" style="display:block">
@@ -94,17 +103,20 @@
             <input id="cpsw" type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
           </div>
           <div class="form-group">
+           <!--/Password-->
+
             <!--!! Save new information to a new user account !!-->
-            <button id="submit_sign_up_button" class="btn btn-primary btn-block login-btn" disabled onclick="submitInfo()">Sign Up</button>
+            <button id="submit_sign_up_button" class="btn btn-primary btn-block login-btn" disabled onclick="submitInfo()">Sign Up</button> 
           </div>
         </div>
-        <div class="modal-footer">
-        </div>
-      </div>
+
+        <!--MODEL BODY-->
+       </form>
     </div>
-  </form>
   </div>
-</div>
+  </div>
+  
+  
 
 
 
@@ -142,15 +154,16 @@
   //make auth and firestore references
   const auth = firebase.auth();
   const db = firebase.firestore();
-  // update firestore settings
-  db.settings({timestampsInSnapshots: true});
+
+ 
 </script>
 <!--------/FIREBASE SETUP----------->
 
 <!------JAVASCRIPT------->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="scripts/index.js"></script>
-  <script src="scripts/auth.js"></script>
+
+ 
 
   
 
