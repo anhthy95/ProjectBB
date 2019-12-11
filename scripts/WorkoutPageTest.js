@@ -3,8 +3,7 @@ var workoutList = [];
 var longSentence = "";
 var email = "";
 
-<script type="text/javascript">
-    function loadEvents() {
+function loadEvents() {
         var mailString;
         function updateMailString() {
             mailString = '?subject=' + encodeURIComponent($('#subject').val())
@@ -15,4 +14,3 @@ var email = "";
         $( "#message" ).focusout(function() { updateMailString(); });
         updateMailString();
     }
-</script>

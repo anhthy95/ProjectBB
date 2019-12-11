@@ -117,23 +117,34 @@
 
 <!--------FIREBASE SETUP----------->
 
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-<!--removed auth.js dependency-->
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCaSQIa1zvUiDp6qV-yKKgGVEmWkSDrZR0",
-      authDomain: "grades-f24de.firebaseapp.com",
-      databaseURL: "https://grades-f24de.firebaseio.com",
-      projectId: "grades-f24de",
-      storageBucket: "grades-f24de.appspot.com",
-      messagingSenderId: "734512442720"
-    };
-    firebase.initializeApp(config);
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
 
-    const auth = firebase.auth();
-    const db = firebase.firestore();
-  </script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCaSQIa1zvUiDp6qV-yKKgGVEmWkSDrZR0",
+    authDomain: "grades-f24de.firebaseapp.com",
+    databaseURL: "https://grades-f24de.firebaseio.com",
+    projectId: "grades-f24de",
+    storageBucket: "grades-f24de.appspot.com",
+    messagingSenderId: "734512442720",
+    appId: "1:734512442720:web:c396e0bd93fced9a068205",
+    measurementId: "G-547F4WXT72"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  //make auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  // update firestore settings
+  db.settings({timestampsInSnapshots: true});
+</script>
 <!--------/FIREBASE SETUP----------->
 
 <!------JAVASCRIPT------->

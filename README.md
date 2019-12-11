@@ -9,6 +9,7 @@ COMMIT RULE:
 4.	Check. The Project Board every day for Issue notice
 
 
+
 CODING RULE: 
 1.	Must comment on the use of each section. 
 2.	No litter on your code (No useless part)
@@ -16,7 +17,7 @@ CODING RULE:
 
 
 RESOURCES:
-
+- URL format: ../img/url or ../css/url for html in pages. Basically ../ means go to parents folder
 - Link to Firebase Database:
 
 
