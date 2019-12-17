@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Responsive -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!---Bootstrap---->
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!----/Bootstrap----->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 
+
+
+ <!---------FIREBASE -----------> 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.1/firebase-auth.js"></script>
+
+<!---------FIREBASE ----------->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCaSQIa1zvUiDp6qV-yKKgGVEmWkSDrZR0",
+    authDomain: "grades-f24de.firebaseapp.com",
+    databaseURL: "https://grades-f24de.firebaseio.com",
+    projectId: "grades-f24de",
+    storageBucket: "grades-f24de.appspot.com",
+    messagingSenderId: "734512442720",
+    appId: "1:734512442720:web:c396e0bd93fced9a068205",
+    measurementId: "G-547F4WXT72"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var auth = firebase.auth();
+  // Get a reference to the database service
+  var db = firebase.database();
+</script>
+
+<!---------/FIREBASE ----------->
+
+  <link href="../css/page.css" rel="stylesheet"> <!--CSS File -->
+  <script src="../scripts/page.js"></script>
+
+</head>
+
+<title>CALENDER</title> 
+
+
+<!---------------------  BODY SECTION  ---------------------------->
+
+<body>
+<!-------GRID LAYOUT CONTENT--------->
+
+ <div class="grid-container">
+
+  <!---HEADER---->
+  <header class="header">
+    <center>
+    <div class="row" >
+      <div class="col-lg-12">
+        <center><h3 color=black>Project BOLD BUFF</h3></center>
+        <center><p> A fitness program by CU students</p></center>
+      </div>
+    </div>
+  </center>
+  </header>
+  <!---/HEADER---->
+
+
+  <!---SIDEBAR---->
+  <aside class="sidenav">
+    <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width: 70px" id = "sidebar">
+    <a href="WorkoutPage.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
+	  <a href="share.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+	  <a href="calendar.html" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i></a>
+	  <a href="workout.html" class="w3-bar-item w3-button"><i class="fas fa-dumbbell"></i></a>
+	  <a href="progress.html" class="w3-bar-item w3-button"><i class="fa fa-line-chart"></i></a>
+  </aside>
+  <!---/SIDEBAR---->
+  
+  <!---MAIN---->
+  <main class="main">
+
+
+    <!---TITLE of the Page--->
+    <div class="container" style="width=device-width">
+      <div class="page-header">
+        <h2>CALENDAR</h2>
+      </div>
+    <br>
+    <!---/TITLE of the Page--->
+
+    <!----CONTENT---->
+  
+  <div class="container-fluid" style="background-color:black; border:0.5vw solid black; border-radius: 0.8vw">
+    <div class="row">
+
+      <div class="col-lg-6" style="border-radius: 0.7vw; margin-top: 0.5vw; margin-bottom: 0.5vw;">
+        <center>
+          <div class="container-fluid" style="background-color:GoldenRod; border:0.8vw solid GoldenRod; border-radius: 0.8vw">
+            <p>
+
+              First card
+               <!------Enter Your Code here --------->
+
+             </p>
+          </div>
+        </center>
+      </div>
+
+      <div class="col-lg-6" style="border-radius: 0.7vw; margin-top: 0.5vw; margin-bottom: 0.5vw;">
+        <center>
+          <div class="container-fluid" style="background-color:GoldenRod; border:0.8vw solid GoldenRod; border-radius: 0.8vw">
+            <p>
+              <!------Enter Your Code here --------->
+              Second Card
+
+
+            </p>
+          </div>
+        </center>
+      </div>
+
+    </div>
+  </div>
+
+    <!----/CONTENT---->
+
+  </main>
+  <!---/MAIN---->
+
+
+  <!--Footer goes here if we want it-->
+ <!--<footer class="footer"></footer>-->
+</div>
+
+<!-------/GRID LAYOUT CONTENT--------->
+
+
+
+	 
+
+ 
+</body>
+<!---------------------  BODY SECTION  ---------------------------->
+
+</html>

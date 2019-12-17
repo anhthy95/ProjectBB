@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+
+  <link href="../css/WorkoutPage.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script src="../scripts/WorkoutPageTest.js"></script>
+
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+
+
+
+  <title>Template Page</title>
+
+
+  <header>
+	<div class="container-fluid" style="background-color:GoldenRod; border:10px solid black">
+		<div class="row">
+			<div class="col-lg-12">
+				<center><h3 color=black>Project BOLD BUFF</h3></center>
+				<center><p> A fitness program by CU students</p></center>
+			</div>
+<!-- 			<div class="col-lg-6">
+				<center><a href="#"><font color=black>Account</font></a></center>
+			</div> -->
+		</div>
+	</div>
+  </header>
+
+
+
+  <!--  BODY SECTION  -->
+  <body>
+    <!-- Fixed navbar -->
+<!--     <sidebar style=" background-color:DarkGoldenRod; border:10px solid black">
+      <a href="#"><font color=black>1</font></a>
+      <a href="#"><font color=black>2</font></a>
+      <a href="#"><font color=black>3</font></a>
+      <a href="#"><font color=black>4</font></a>
+      <a href="#"><font color=black>5</font></a>
+    </sidebar> -->
+
+
+
+
+
+
+
+
+	<div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px">
+	  <a href="WorkoutPage.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
+	  <a href="share.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+	  <a href="calendar.html" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i></a>
+	  <a href="workout.html" class="w3-bar-item w3-button"><i class="fas fa-dumbbell"></i></a>
+	  <a href="progress.html" class="w3-bar-item w3-button"><i class="fa fa-line-chart"></i></a>
+	</div>
+	<div style="margin-left:70px">
+    <!-- Begin page content -->
+	  <br>
+    <div class="container" style="width=device-width">
+      <div class="page-header" style="background-color:GoldenRod; border:10px solid black; border-radius: 10px">
+        <center><h1>Welcome to your BOLD workout!</h1></center>
+      </div>
+		<br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+	<div class="container-fluid" style="background-color:black; border:7px solid black; border-radius: 10px">
+		<div class="row">
+			<div class="col-lg-6" style="border-radius: 7px">
+				 <center>
+					<div class="container-fluid" style="background-color:GoldenRod; border:10px solid GoldenRod; border-radius: 10px">
+            <p>Date: <input type="text" id="datepicker"></p>
+
+
+            <br>
+              <br>
+                <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+					</div>
+				 </center>
+			</div>
+			<div class="col-lg-6" style="border-radius: 7px">
+				<center>
+					<div class="container-fluid" style="background-color:GoldenRod; border:10px solid GoldenRod; border-radius: 10px">
+<!-- make this form action go back to same page after submiting workout -->
+
+    Workout name: <input type="text" name="wName" id = "wName2"
+    <form action="/action_page.php">
+    <select name="Type of Workout">
+      <option value="upper body">Upper Body</option>
+      <option value="lower body">Lower Body</option>
+      <option value="abs">Abdominals</option>
+
+    </select>
+
+  </center>
+
+    <br>
+
+
+    <center>
+      <div class="container-fluid" style="background-color:GoldenRod; border:10px solid GoldenRod; border-radius: 10px">
+        Weight (lbs): <input type="text" id = "weight" text-align = "left" name="weight" maxlength="3" size="4" >
+  </center>
+
+    <br>
+    <center>
+      <div class="container-fluid" style="background-color:GoldenRod; border:10px solid GoldenRod; border-radius: 10px">
+    # of Sets: <input type="text" id = "sets" name="sets" maxlength="2" size="3">
+    </center>
+
+    <br>
+    <center>
+      <div class="container-fluid" style="background-color:GoldenRod; border:10px solid GoldenRod; border-radius: 10px">
+    # of Reps: <input type="text" id = "reps" name="reps" maxlength="2" size="2">
+  </center>
+    <br>
+
+					</div>
+				<!-- </center> -->
+
+			</div>
+
+
+      <center>
+      <!-- <input type="submit"> -->
+      <button onclick="myFunction()">Add workout</button>
+    </form>
+
+  </center>
+
+</div>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+
+
+
+
+  <div class="container-fluid" style="background-color:black; border:7px solid black; border-radius: 10px">
+    <div class="row">
+      <div class="col-lg-6" style="border-radius: 7px">
+
+</div>
+
+					<div class="container-fluid" style="background-color:GoldenRod; border:10px solid GoldenRod; border-radius: 10px">
+            <center>
+         <h2 id="workoutPlan">Workout Plan</h2>
+         <br>
+       </center>
+
+       <center>
+        <p id = "workouts"><font color="black"> You currently have no workouts planned! </font></p>
+        <ul id="wList">
+
+        </ul>
+
+      <!--   <button onclick="myFunction()">Try it</button> -->
+
+        <script>
+
+function myFunction() {
+
+  //var para = document.createElement("P");
+
+  document.getElementById("workouts").value = "";
+  document.getElementById("workouts").innerHTML = "";
+  document.getElementById("feedbacks").value = "";
+  document.getElementById("feedbacks").innerHTML = "";
+
+  var node = document.createElement("LI");
+
+  var x = document.getElementsByTagName("datepicker");
+  var sentence = document.getElementById("datepicker").value + "     " + document.getElementById("weight").value + " pounds on " + document.getElementById("wName2").value + " for " + document.getElementById('reps').value + " reps and " + document.getElementById("sets").value + " sets";
+
+
+  var textnode = document.createTextNode(sentence);
+
+  node.appendChild(textnode);
+
+  document.getElementById("wList").appendChild(node);
+
+
+workoutList.push(sentence);
+longSentence=longSentence + "," + sentence;
+
+document.getElementById("workouts").value = "";
+}
+</script>
+
+<a href="mailto:[FriendEmail]@example.com?subject=Workout List&body=" + longSentence + >Email workouts to a friend</a>
+
+
+
+      </center>
+
+    </div>
+    </div>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+      <div class="container-fluid" style="background-color:black; border:7px solid black; border-radius: 10px">
+        <div class="row">
+          <div class="col-lg-6" style="border-radius: 7px">
+
+      </div>
+
+              <div class="container-fluid" style="background-color:GoldenRod; border:10px solid GoldenRod; border-radius: 10px">
+                <center>
+             <h2 id="workoutPlan">Feedback</h2>
+             <br>
+           </center>
+
+           <center>
+             <center>
+              <p id = "feedbacks"><font color="black"> You have no feedback to give! </font></p>
+           </center>
+
+
+
+           <center>
+             Your comments:<br>
+<textarea name="comments" id = "textbox" rows="15" cols="50">
+</textarea>
+<br>
+
+<a href="index.html">
+  <button onclick="logout()">Logout</button>
+</a>
+
+           </center>
+
+
+
+         </div>
+         </div>
+         </div>
+
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+
+
+
+           <div class="container-fluid" style="background-color:black; border:7px solid black; border-radius: 10px">
+             <div class="row">
+               <div class="col-lg-6" style="border-radius: 7px">
+
+           </div>
+
+                   <div class="container-fluid" style="background-color:GoldenRod; border:10px solid GoldenRod; border-radius: 10px">
+                     <center>
+                  <h2 id="profilepage">Profile</h2>
+                  Age: <input type="text" id = "weight" text-align = "left" name="weight" maxlength="2" size="4" >
+                  Weight (lbs): <input type="text" id = "weight" text-align = "left" name="weight" maxlength="4" size="4" >
+                  Height: <input type="text" id = "weight" text-align = "left" name="weight" maxlength="4" size="4" >
+                  <br>
+                  <br>
+                  <button onclick="">Update Profile</button>
+                </center>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+		</div>
+	</div>
+
+
+
+<br>
+<br>
+
+    </div>
+	</div>
+	  <!--Footer goes here if we want it-->
+  </body>
+</html>
