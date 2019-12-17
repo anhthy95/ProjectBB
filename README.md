@@ -1,6 +1,8 @@
 # ProjectBB
 CSCI3308 Project
 
+-Repository structure:
+
 COMMIT RULE: 
 
 1.	Commit on master branch must not have any errors, check for the console log
