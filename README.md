@@ -1,8 +1,15 @@
 # ProjectBB
 CSCI3308 Project
 
--Repository structure:
-
+- REPOSITORY STRUCTURE: 
+  + css: css files
+  + img: background images
+  + other: scrap codes
+  + pages: html of sub pages
+  + scripts: javascripts file
+  - index.html: homepage html
+  
+  
 COMMIT RULE: 
 
 1.	Commit on master branch must not have any errors, check for the console log
